@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
-import { Statistics } from './Statistics/Statistics';
+import { Section } from './Section/Section';
 
 export class App extends Component {
   state = {
@@ -32,35 +31,19 @@ export class App extends Component {
   };
 
   countPositiveFeedbackPercentage = () => {
-    const total = this.countTotalFeedback();
-    console.log('total', total);
-
-    let x = 100;
-
-    const onePercent = total / 100;
-    console.log('onePercent', onePercent);
-
-    const fraction = total - this.state.good;
-    console.log('fraction', fraction);
-
-    console.log('==========================');
-    return (x = Math.ceil(fraction / onePercent));
+    return Math.round((this.state.good * 100) / this.countTotalFeedback());
   };
 
   render() {
     const { good, neutral, bad } = this.state;
+
     return (
       <>
-        <FeedbackOptions
+        <Section
           good={good}
           neutral={neutral}
           bad={bad}
-          goodFB={this.handleGoodFeedback}
-        />
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
+          goodFeedback={this.handleGoodFeedback}
           total={this.countTotalFeedback}
           positivePercentage={this.countPositiveFeedbackPercentage}
         />
@@ -68,3 +51,30 @@ export class App extends Component {
     );
   }
 }
+
+{
+  /* <FeedbackOptions
+    good={good}
+    neutral={neutral}
+    bad={bad}
+    goodFB={this.handleGoodFeedback}
+  />
+  <Statistics
+  good={good}
+  neutral={neutral}
+    bad={bad}
+    total={this.countTotalFeedback}
+    positivePercentage={this.countPositiveFeedbackPercentage}
+  /> */
+}
+// import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+// import { Statistics } from './Statistics/Statistics';
+
+// countPositiveFeedbackPercentage = () => {
+//   const total = this.countTotalFeedback();
+//   let x;
+//   const onePercent = total / 100;
+//   const fraction = total - this.state.good;
+//   x = Math.round(fraction / onePercent);
+//   return x;
+// };
