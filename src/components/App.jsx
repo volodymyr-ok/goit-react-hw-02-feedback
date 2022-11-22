@@ -9,11 +9,30 @@ export class App extends Component {
     bad: 0,
   };
 
+  handleGoodFeedback = evt => {
+    if (evt.target === evt.currentTarget) {
+      return;
+    }
+
+    for (const feedback in this.state) {
+      if (evt.target.textContent.toLowerCase() === feedback) {
+        this.setState(prevState => {
+          return { [feedback]: prevState[feedback] + 1 };
+        });
+      }
+    }
+  };
+
   render() {
     const { good, neutral, bad } = this.state;
     return (
       <>
-        <FeedbackOptions good={good} neutral={neutral} bad={bad} />
+        <FeedbackOptions
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          goodFB={this.handleGoodFeedback}
+        />
         <Statistics good={good} neutral={neutral} bad={bad} />
       </>
     );
