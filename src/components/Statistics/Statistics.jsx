@@ -3,7 +3,7 @@ import { StyledDiv } from './Statistics.styled';
 
 export class Statistics extends Component {
   render() {
-    const { good, neutral, bad } = this.props;
+    const { good, neutral, bad, total, positivePercentage } = this.props;
 
     return (
       <StyledDiv>
@@ -17,6 +17,13 @@ export class Statistics extends Component {
         </p>
         <p>
           <span className="statsTag">Bad:</span> {bad}
+        </p>
+        <p>
+          <span className="statsTag">Total:</span> {total()}
+        </p>
+        <p>
+          <span className="statsTag">Positive feedback:</span>{' '}
+          {positivePercentage()}%
         </p>
       </StyledDiv>
     );
