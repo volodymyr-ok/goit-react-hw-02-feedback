@@ -1,5 +1,6 @@
 import { Notification } from '../Notification/Notification';
 import { StyledDiv } from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({
   good,
@@ -32,4 +33,12 @@ export const Statistics = ({
   ) : (
     <Notification message="There is no feedback" />
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.func.isRequired,
+  positivePercentage: PropTypes.func.isRequired,
 };

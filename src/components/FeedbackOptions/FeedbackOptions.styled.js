@@ -12,18 +12,20 @@ export const StyledDiv = styled.div`
   button {
     letter-spacing: 2px;
     background-color: transparent;
-    border: 1px solid #fc78ff;
+    border: 4px double #fc78ff5e;
     border-radius: 4px;
     font-size: 20px;
     padding: 10px 15px;
     color: inherit;
     cursor: pointer;
 
-    transition: box-shadow 250ms;
+    transition-property: box-shadow, border-color, box-shadow,
+      -webkit-text-stroke;
+    transition-duration: 250ms;
   }
   button:hover {
     box-shadow: 10px 10px 30px #2400ff, -10px -10px 30px #7e2bd9;
-    background-color: transparent, border-color, box-shadow, -webkit-text-stroke;
+    background-color: transparent;
     &.goodBtn {
       border-color: #2ded54;
       background-color: transparent;
