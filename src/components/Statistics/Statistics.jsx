@@ -24,7 +24,7 @@ export const Statistics = ({
       <p>
         <span className="statsTag">Total:</span> {total()}
       </p>
-      <p>
+      <p className="positivePerc">
         <span className="statsTag">Positive feedback:</span>{' '}
         {positivePercentage()}%
       </p>

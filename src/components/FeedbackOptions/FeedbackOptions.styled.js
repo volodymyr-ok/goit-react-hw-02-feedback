@@ -29,19 +29,21 @@ export const StyledDiv = styled.div`
       background-color: transparent;
       -webkit-text-stroke: 1px #2ded54;
       box-shadow: 1px 1px 30px #2ded54, -1px -1px 30px #2ded54,
-        inset 1px 1px 30px #2ded54, inset -1px -1px 30px #2ded54;
+        inset 1px 1px 30px #2ded5424, inset -1px -1px 30px #2ded5424;
     }
     &.neutralBtn {
       border-color: #f8ff78;
       background-color: transparent;
       -webkit-text-stroke: 1px #f8ff78;
-      box-shadow: 1px 1px 30px #f8ff78, -1px -1px 30px #f8ff78;
+      box-shadow: 1px 1px 30px #f8ff78, -1px -1px 30px #f8ff78,
+        inset 1px 1px 30px #f8ff7836, inset -1px -1px 30px #f8ff7836;
     }
     &.badBtn {
       border-color: #e13b5a;
       background-color: transparent;
       -webkit-text-stroke: 1px #e13b5a;
-      box-shadow: 1px 1px 30px #e13b5a, -1px -1px 30px #e13b5a;
+      box-shadow: 1px 1px 30px #e13b5a, -1px -1px 30px #e13b5a,
+        inset 1px 1px 30px #e13b5a38, inset -1px -1px 30px #e13b5a38;
     }
   }
 

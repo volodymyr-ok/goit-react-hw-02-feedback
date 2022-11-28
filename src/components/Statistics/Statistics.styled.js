@@ -32,5 +32,6 @@ export const StyledDiv = styled.div`
 
   .statsTag {
     font-weight: 500;
+    /* text-shadow: 1px 1px 30px #2ded54, -1px -1px 30px #2ded54; */
   }
 `;
