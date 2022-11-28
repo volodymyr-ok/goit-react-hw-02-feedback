@@ -12,13 +12,13 @@ export const Statistics = ({
     <StyledDiv>
       <h2>Statistics</h2>
 
-      <p>
+      <p className="good">
         <span className="statsTag">Good:</span> {good}
       </p>
-      <p>
+      <p className="neutral">
         <span className="statsTag">Neutral:</span> {neutral}
       </p>
-      <p>
+      <p className="bad">
         <span className="statsTag">Bad:</span> {bad}
       </p>
       <p>

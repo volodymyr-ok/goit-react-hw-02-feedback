@@ -1,7 +1,9 @@
+import { StyledPar } from './Notification.styled';
+
 export const Notification = ({ message }) => {
   return (
     <>
-      <p>{message}</p>
+      <StyledPar>{message}</StyledPar>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import { StyledDiv } from './FeedbackOptions.styled';
+import PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({ goodFeedback }) => {
   return (
@@ -10,4 +11,8 @@ export const FeedbackOptions = ({ goodFeedback }) => {
       <button className="badBtn">Bad</button>
     </StyledDiv>
   );
+};
+
+FeedbackOptions.propTypes = {
+  goodFeedback: PropTypes.func.isRequired,
 };
