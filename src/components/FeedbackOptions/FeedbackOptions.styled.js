@@ -15,7 +15,7 @@ export const StyledDiv = styled.div`
     color: inherit;
     cursor: pointer;
 
-    transition-property: box-shadow, border-color, box-shadow,
+    transition-property: color, box-shadow, border-color, box-shadow,
       -webkit-text-stroke;
     transition-duration: 250ms;
   }
