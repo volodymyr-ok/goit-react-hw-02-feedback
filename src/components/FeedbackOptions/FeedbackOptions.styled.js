@@ -4,10 +4,6 @@ export const StyledDiv = styled.div`
   padding: 10px;
   margin-bottom: 50px;
   text-align: center;
-  h2 {
-    font-size: 36px;
-    margin-bottom: 25px;
-  }
 
   button {
     letter-spacing: 2px;

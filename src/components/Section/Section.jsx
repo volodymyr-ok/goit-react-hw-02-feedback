@@ -1,24 +1,16 @@
-import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
-import { Statistics } from '../Statistics/Statistics';
+import PropTypes from 'prop-types';
+import { StyledDiv } from './Section.styled';
 
-export const Section = ({
-  good,
-  neutral,
-  bad,
-  goodFeedback,
-  total,
-  positivePercentage,
-}) => {
+export const Section = ({ children, title }) => {
   return (
-    <>
-      <FeedbackOptions goodFeedback={goodFeedback} />
-      <Statistics
-        good={good}
-        neutral={neutral}
-        bad={bad}
-        total={total}
-        positivePercentage={positivePercentage}
-      />
-    </>
+    <StyledDiv>
+      <h2>{title}</h2>
+      {children}
+    </StyledDiv>
   );
+};
+
+Section.propTypes = {
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
 };

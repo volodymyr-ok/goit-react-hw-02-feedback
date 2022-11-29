@@ -1,4 +1,5 @@
 import { StyledPar } from './Notification.styled';
+import PropTypes from 'prop-types';
 
 export const Notification = ({ message }) => {
   return (
@@ -6,4 +7,8 @@ export const Notification = ({ message }) => {
       <StyledPar>{message}</StyledPar>
     </>
   );
+};
+
+Notification.propTypes = {
+  message: PropTypes.string.isRequired,
 };

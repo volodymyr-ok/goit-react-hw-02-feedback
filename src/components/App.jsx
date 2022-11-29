@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Section } from './Section/Section';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import { Statistics } from './Statistics/Statistics';
 
 export class App extends Component {
   state = {
@@ -39,42 +41,20 @@ export class App extends Component {
 
     return (
       <>
-        <Section
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          goodFeedback={this.handleGoodFeedback}
-          total={this.countTotalFeedback}
-          positivePercentage={this.countPositiveFeedbackPercentage}
-        />
+        <Section title="Please leave feedback">
+          <FeedbackOptions goodFeedback={this.handleGoodFeedback} />
+        </Section>
+
+        <Section title="Statistics">
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={this.countTotalFeedback}
+            positivePercentage={this.countPositiveFeedbackPercentage}
+          />
+        </Section>
       </>
     );
   }
 }
-
-{
-  /* <FeedbackOptions
-    good={good}
-    neutral={neutral}
-    bad={bad}
-    goodFB={this.handleGoodFeedback}
-  />
-  <Statistics
-  good={good}
-  neutral={neutral}
-    bad={bad}
-    total={this.countTotalFeedback}
-    positivePercentage={this.countPositiveFeedbackPercentage}
-  /> */
-}
-// import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
-// import { Statistics } from './Statistics/Statistics';
-
-// countPositiveFeedbackPercentage = () => {
-//   const total = this.countTotalFeedback();
-//   let x;
-//   const onePercent = total / 100;
-//   const fraction = total - this.state.good;
-//   x = Math.round(fraction / onePercent);
-//   return x;
-// };

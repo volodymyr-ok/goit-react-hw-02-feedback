@@ -11,8 +11,6 @@ export const Statistics = ({
 }) => {
   return total() ? (
     <StyledDiv>
-      <h2>Statistics</h2>
-
       <p className="good">
         <span className="statsTag">Good:</span> {good}
       </p>
